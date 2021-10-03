@@ -1,0 +1,9 @@
+# Copyright (c) 2020 The ZMK Contributors
+# SPDX-License-Identifier: MIT
+
+if SHIELD_BDN9
+
+config ZMK_KEYBOARD_NAME
+    default "BDN9"
+
+endif

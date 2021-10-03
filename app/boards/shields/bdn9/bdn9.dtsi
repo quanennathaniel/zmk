@@ -1,0 +1,38 @@
+/*
+ * Copyright (c) 2020 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+ left_encoder: encoder_left {
+        compatible = "alps,ec11";
+        label = "LEFT_ENCODER";
+        a-gpios = <PIN_A (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        b-gpios = <PIN_B (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        resolution = <4>;
+    };
+ 
+    
+    left_encoder: encoder_left {
+                compatible = "alps,ec11";
+                label = "LEFT_ENCODER";
+                a-gpios = <&pro_micro 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+                b-gpios = <&pro_micro 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+                resolution = <4>;
+                status = "disabled";
+        };
+        mid_encoder: encoder_mid {
+                compatible = "alps,ec11";
+                label = "MID_ENCODER";
+                a-gpios = <&pro_micro 19 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+                b-gpios = <&pro_micro 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+                resolution = <4>;
+                status = "disabled";
+        };
+        right_encoder: encoder_right {
+                compatible = "alps,ec11";
+                label = "RIGHT_ENCODER";
+                a-gpios = <&pro_micro 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+                b-gpios = <&pro_micro 18 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+                resolution = <4>;
+                status = "disabled";
+        };

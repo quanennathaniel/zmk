@@ -1,0 +1,42 @@
+*
+ * Copyright (c) 2020 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+#include "bdn9.dtsi"
+
+/ {
+    chosen {
+        zmk,kscan = &kscan0;
+    };
+
+    kscan: kscan {
+        compatible = "zmk,kscan-gpio-direct";
+        label = "KSCAN";
+
+        input-gpios
+            = <&pro_micro 0 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            , <&pro_micro 4  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            , <&pro_micro 21  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            , <&pro_micro 6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            , <&pro_micro 15  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            , <&pro_micro 14  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            , <&pro_micro 7  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            , <&pro_micro 8  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            , <&pro_micro 16  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            ;
+    };
+
+
+&left_encoder {
+    status = "okay";
+};
+
+&mid_encoder {
+    status = "okay";
+};
+
+&right_encoder {
+    status = "okay";
+};

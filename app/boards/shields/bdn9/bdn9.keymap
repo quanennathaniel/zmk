@@ -1,0 +1,40 @@
+*
+ * Copyright (c) 2020 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/rgb.h>
+
+/* Uncomment and keep whatever encoders are on your BDN9
+&sensors {
+    status = "okay";
+    sensors = <&left_encoder &mid_encoder &right_encoder>;
+};
+*/
+
+// Uncomment each encoder installed on your BDN9
+ &left_encoder { status = "okay"; };
+ &mid_encoder { status = "okay"; };
+ &right_encoder { status = "okay"; };
+
+/ {
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer {
+            bindings = <
+                &kp HOME  &kp K_PP &kp END
+                &kp PG_UP &kp UP   &kp PG_DN
+                &kp LEFT  &kp DOWN &kp RIGHT
+            >;
+           
+
+            sensor-bindings = <inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN inc_dec_kp C_VOL_UP C_VOL_DN>;
+            */
+        };
+    };
+};
